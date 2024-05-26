@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-24.05";
     flake-utils.url = "github:numtide/flake-utils";
 
     adonthell_src.url = "git://git.sv.nongnu.org/adonthell.git";
@@ -32,13 +32,13 @@
                           '"${pkgs.python3}/lib"'
             '';
 
-            CPPFLAGS = ''-I${pkgs.SDL2}/include/SDL2 -I${pkgs.SDL2_mixer}/include/SDL2 -I${pkgs.SDL2_ttf}/include/SDL2'';
+            CPPFLAGS = ''-I${pkgs.SDL2.dev}/include/SDL2 -I${pkgs.SDL2_mixer.dev}/include/SDL2 -I${pkgs.SDL2_ttf}/include/SDL2'';
 
             nativeBuildInputs = with pkgs; [
               autoreconfHook
               bison
               flex
-              pkgconfig
+              pkg-config
               python3
               swig3
             ];
@@ -74,7 +74,7 @@
 
             nativeBuildInputs = with pkgs; [
               autoreconfHook
-              pkgconfig
+              pkg-config
             ];
 
             buildInputs = [

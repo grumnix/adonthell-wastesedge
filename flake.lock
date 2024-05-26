@@ -3,11 +3,11 @@
     "adonthell-wastesedge_src": {
       "flake": false,
       "locked": {
-        "lastModified": 1557586585,
-        "narHash": "sha256-rcm0ytuwCJ/jkcyhIdpWmW5fBkQOlypnnCkSU+szdSk=",
+        "lastModified": 1716133146,
+        "narHash": "sha256-VvqUWWpVRf6aOiRlTx/bBKX6bciMfPmbaFCx37RuUdw=",
         "ref": "refs/heads/master",
-        "rev": "a93cd222cf4dc961fba8dab94d1cbde897ac0769",
-        "revCount": 408,
+        "rev": "acc1ae62c9ded7f704a82bee463e6ead3cea4544",
+        "revCount": 409,
         "type": "git",
         "url": "git://git.sv.nongnu.org/adonthell/adonthell-wastesedge.git"
       },
@@ -19,11 +19,11 @@
     "adonthell_src": {
       "flake": false,
       "locked": {
-        "lastModified": 1546178726,
-        "narHash": "sha256-yDcWEMdLG59RojcZgHRhU0I5+T9TA2hW7FSS6XUhJCI=",
+        "lastModified": 1706548159,
+        "narHash": "sha256-J7/bcx0HGCF5bLMtNfxz1/+kjx7syc7T0pmUvj8tDug=",
         "ref": "refs/heads/master",
-        "rev": "172ba26f9ce57c5418077ccb19899526ab6544a9",
-        "revCount": 1139,
+        "rev": "3002b3c7a62b1c80b393a092a8cb23e85ce69559",
+        "revCount": 1142,
         "type": "git",
         "url": "git://git.sv.nongnu.org/adonthell.git"
       },
@@ -33,12 +33,15 @@
       }
     },
     "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
       "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "lastModified": 1710146030,
+        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
         "type": "github"
       },
       "original": {
@@ -49,16 +52,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1661617163,
-        "narHash": "sha256-NN9Ky47j8ohgPhA9JZyfkYIbbAo6RJkGz+7h8/exVpE=",
+        "lastModified": 1716542732,
+        "narHash": "sha256-0Y9fRr0CUqWT4KgBITmaGwlnNIGMYuydu2L8iLTfHU4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0ba2543f8c855d7be8e90ef6c8dc89c1617e8a08",
+        "rev": "d12251ef6e8e6a46e05689eeccd595bdbd3c9e60",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-22.05",
+        "ref": "nixos-24.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -69,6 +72,21 @@
         "adonthell_src": "adonthell_src",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     }
   },

@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-24.11";
     flake-utils.url = "github:numtide/flake-utils";
 
     adonthell_src.url = "git://git.sv.nongnu.org/adonthell.git";
@@ -14,6 +14,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        python = pkgs.python3.withPackages(ps: with ps; [ distutils ]);
       in {
         packages = rec {
           default = adonthell-wastesedge;
@@ -29,7 +30,7 @@
             postPatch = ''
               substituteInPlace configure.ac \
                 --replace 'distutils.sysconfig.get_config_var("LIBPL")' \
-                          '"${pkgs.python3}/lib"'
+                          '"${python}/lib"'
             '';
 
             CPPFLAGS = ''-I${pkgs.SDL2.dev}/include/SDL2 -I${pkgs.SDL2_mixer.dev}/include/SDL2 -I${pkgs.SDL2_ttf}/include/SDL2'';
@@ -39,8 +40,9 @@
               bison
               flex
               pkg-config
-              python3
               swig3
+            ] ++ [
+              python
             ];
 
             buildInputs = with pkgs; [
